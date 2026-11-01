@@ -39,7 +39,7 @@ By default, there's no syntax highlighting.
 touch README.md
 ```
 
-![notebook](/app/assets/images/demo/images_1.png)
+![flashcards](app/assets/images/demo/images_1.png)
 
 # Flashcard App
 
