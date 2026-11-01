@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Julian Diaz" />
+    <meta
+      name="description"
+      content="This page was intended as a personal use for improving the knowledge of learning to write HTML or other subjects"
+    />
+    <meta
+      name="keywords"
+      content="study aids flashcards learning materials more"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="assets/vendor/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./assets/js/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__title">
+        <a class="header__link" href="#home">Flash Cards</a>
+      </h1>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li><a href="#home" class="nav__link">My Decks</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main-content">
+      <section id="decks" class="decks">
+        <h2 class="mydecks">My Decks</h2>
+        <div class="wrapping__row">
+          <template id="deck-template">
+            <li class="deck">
+              <a class="deck__link" href="#"></a>
+              <h3 class="deck__title"></h3>
+              <div class="deck__wrapper">
+                <span class="deck__count"></span>
+                <button class="deck__btn_delete">
+                  <img
+                    src="assets/images/delete.svg"
+                    alt="user submitted image"
+                    class="delete__image"
+                    aria-label="delete this deck"
+                  />
+                </button>
+              </div>
+            </li>
+          </template>
+          <ul class="wrapping__row__display-contents">
+            <li class="newdeck newdeck__title">+new deck</li>
+          </ul>
+        </div>
+      </section>
+      <section id="carousel" class="carousel" hidden>
+        <h2 class="carousel__title"></h2>
+        <div class="carousel__row">
+          <button
+            disabled
+            type="button"
+            aria-label="Go to previous card in deck"
+            class="carousel__btn carousel__btn_left carousel__btn_left_disabled"
+          >
+            <img
+              src="assets/images/left.svg"
+              alt=""
+              class="carousel__btn_left"
+            />
+          </button>
+          <div class="carousel__card">
+            <span class="carousel__card-text"></span>
+          </div>
+          <button
+            type="button"
+            aria-label="Go to next card in deck"
+            class="carousel__btn carousel__btn_right carousel__btn_right_disabled"
+          >
+            <img
+              src="assets/images/right.svg"
+              alt=""
+              class="carousel__btn_right"
+            />
+          </button>
+        </div>
+        <button
+          type="button"
+          aria-label="Flip card"
+          class="carousel__btn carousel__btn_flip"
+        >
+          <img src="assets/images/flip.svg" alt="" class="carousel__btn_flip" />
+        </button>
+      </section>
+      <section id="not-found" class="not-found" hidden>
+        <h2 class="not-found__title">404 Not Found</h2>
+        <p class="not-found__text">Opps! We can't find that.</p>
+      </section>
+    </main>
+    <footer class="footer">@2006 Julian Diaz</footer>
+  </body>
+</html>
