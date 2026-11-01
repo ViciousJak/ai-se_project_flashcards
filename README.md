@@ -40,7 +40,6 @@ touch README.md
 ```
 
 ![flashcards](assets/images/demo/images_1.png)
-app\assets\images\demo\images_1.png
 
 # Flashcard App
 
