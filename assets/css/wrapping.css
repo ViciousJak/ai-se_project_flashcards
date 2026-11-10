@@ -1,0 +1,10 @@
+.wrapping__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-left: 40px;
+}
+
+.wrapping__row__display-contents {
+  display: contents;
+}

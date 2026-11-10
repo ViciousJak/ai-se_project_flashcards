@@ -1,0 +1,9 @@
+.footer {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  color: #00000080;
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px 0px 32px 40px;
+}

@@ -1,0 +1,23 @@
+.newdeck {
+  background-color: #d9d9d9;
+  color: #1a1a1a;
+  width: 325px;
+  height: 205px;
+  display: flex;
+  border-radius: 20px;
+  border-width: 10px;
+  justify-content: flex-start;
+  padding: 20px 20px 20px 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  opacity: 50%;
+}
+
+.newdeck:hover {
+  background-color: #c5c5c5;
+  color: #1a1a1a;
+  opacity: 100%;
+}

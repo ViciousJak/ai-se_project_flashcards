@@ -73,7 +73,7 @@ function renderCarouselView(deck) {
   const colorName = hexToString(deck.color);
 
   if (colorName) {
-    carouselCard.classList.add(`card__carousel_color_${colorName}`);
+    carouselCard.classList.add(`carousel__card_color_${colorName}`);
   }
 
   updateDisplay();
