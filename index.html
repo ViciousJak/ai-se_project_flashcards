@@ -36,9 +36,16 @@
       </nav>
     </header>
     <main class="page__main-content">
-      <section id="decks" class="gallery">
-        <h2 class="gallery__title">My Decks</h2>
-        <div class="wrapping__row">
+      <section
+        id="home"
+        class="gallery"
+        aria-labelledby="deck-view-title"
+        data-view="deck-view"
+      >
+        <h2 id="deck-view-title" class="gallery__title deck-view__title">
+          My Decks
+        </h2>
+        <div class="wrapping__row deck-view__row">
           <template id="deck-template">
             <li class="card">
               <a class="card__link" href="#"></a>
@@ -56,11 +63,44 @@
               </div>
             </li>
           </template>
-          <ul class="wrapping__row__display-contents">
+          <ul class="wrapping__row__display-contents deck-view__list">
             <li class="newdeck newdeck__title">+New Deck</li>
           </ul>
         </div>
       </section>
+      <!--- start of practice button code --->
+      <section id="deck-view" class="gallery">
+        <div class="wrapping-row">
+          <ul class="gallery__list wrapping-row__display-contents"></ul>
+          <button type="button" class="gallery__new-card-btn">+New Card</button>
+          <div>
+            <h2 class="gallery__title"></h2>
+            <button type="button" class="gallery__practice">Practice</button>
+          </div>
+        </div>
+      </section>
+      <!--- end of pratice button code --->
+
+      <!-- start of deck template -->
+      <template id="card-template">
+        <li class="card">
+          <h3 class="card__title"></h3>
+          <div class="card__row">
+            <button
+              type="button"
+              class="card__open-btn"
+              aria-label="Open deck"
+            ></button>
+            <button
+              type="button"
+              aria-label="Delete deck"
+              class="card__delete-btn"
+            ></button>
+          </div>
+        </li>
+      </template>
+      <!-- end of deck template -->
+
       <section id="carousel" class="carousel" hidden>
         <h2 class="carousel__title"></h2>
         <div class="carousel__row">

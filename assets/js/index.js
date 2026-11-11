@@ -2,7 +2,7 @@ import { hexToString } from "./colors.js";
 import { decks, getDeckByID } from "./decks.js";
 import { renderCarouselView } from "./carousel.js";
 
-const galleryView = document.querySelector("#decks");
+const galleryView = document.querySelector("#home");
 const carouselView = document.querySelector("#carousel");
 const notFoundView = document.querySelector("#not-found");
 
