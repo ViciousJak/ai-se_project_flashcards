@@ -1,4 +1,4 @@
-.mydecks {
+.gallery__title {
   font-weight: 700;
   font-size: 40px;
   padding-left: 40px;
@@ -6,7 +6,7 @@
   margin: 0 auto;
 }
 
-.deck__title {
+.card__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
@@ -15,11 +15,11 @@
   margin-top: 0;
 }
 
-.deck__count {
+.card__count {
   gap: 18px 20px;
 }
 
-.deck__btn_delete {
+.card__btn_delete {
   position: relative;
   z-index: 2;
   display: block;
@@ -31,11 +31,11 @@
   cursor: pointer;
   opacity: 50%;
 }
-.deck__btn_delete:hover {
+.card__btn_delete:hover {
   opacity: 100%;
 }
 
-.decks__new-deck-btn {
+.gallery__new-card-btn {
   background-color: #d9d9d9;
   width: 300px;
   height: 160px;
@@ -47,7 +47,7 @@
   cursor: pointer;
 }
 
-.deck {
+.card {
   position: relative;
   width: 325px;
   height: 205px;
@@ -62,37 +62,37 @@
   justify-content: space-between;
 }
 
-.deck--green {
+.card--green {
   background-color: #64d583;
 }
 
-.deck--blue {
+.card--blue {
   background-color: #91a8f9;
 }
 
-.deck--pink {
+.card--pink {
   background-color: #ee92d7;
 }
 
-.deck--purple {
+.card--purple {
   background-color: #aa8ef0;
 }
 
-.deck--orange {
+.card--orange {
   background-color: #ee955e;
 }
 
-.deck--yellow {
+.card--yellow {
   background-color: #f5d770;
 }
 
-.deck__wrapper {
+.card__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.deck__link {
+.card__link {
   position: absolute;
   inset: 0;
   z-index: 1;
