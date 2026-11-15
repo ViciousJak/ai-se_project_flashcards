@@ -69,14 +69,19 @@
         </div>
       </section>
       <!--- start of practice button code --->
-      <section id="deck-view" class="gallery">
-        <div class="wrapping-row">
-          <ul class="gallery__list wrapping-row__display-contents"></ul>
-          <button type="button" class="gallery__new-card-btn">+New Card</button>
-          <div>
-            <h2 class="gallery__title"></h2>
+      <section
+        id="deck-view"
+        class="gallery"
+        aria-labelledby="deck-title"
+        hidden
+      >
+        <div class="wrapping__row deck-view__row">
+          <div class="gallery__header deck-view__header">
+            <h2 id="deck-title" class="gallery__title"></h2>
             <button type="button" class="gallery__practice">Practice</button>
           </div>
+          <ul class="gallery__list wrapping__row__display-contents"></ul>
+          <button type="button" class="gallery__new-card-btn">+New Card</button>
         </div>
       </section>
       <!--- end of pratice button code --->
@@ -85,22 +90,25 @@
       <template id="card-template">
         <li class="card">
           <h3 class="card__title"></h3>
-          <div class="card__row">
+          <div class="card__wrapper">
             <button
               type="button"
-              class="card__open-btn"
-              aria-label="Open deck"
-            ></button>
+              class="card__btn_flip"
+              aria-label="Show answer"
+            >
+              <img src="assets/images/flip.svg" alt="" class="card__icon" />
+            </button>
             <button
               type="button"
-              aria-label="Delete deck"
-              class="card__delete-btn"
-            ></button>
+              class="card__btn_delete"
+              aria-label="Delete card"
+            >
+              <img src="assets/images/delete.svg" alt="" class="card__icon" />
+            </button>
           </div>
         </li>
       </template>
       <!-- end of deck template -->
-
       <section id="carousel" class="carousel" hidden>
         <h2 class="carousel__title"></h2>
         <div class="carousel__row">

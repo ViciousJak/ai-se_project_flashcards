@@ -1,5 +1,8 @@
 import { hexToString } from "./colors.js";
 import { removeColorClasses } from "./colors.js";
+
+let carouselEventsController;
+
 function renderCarouselView(deck) {
   let currentIndex = 0;
   let showingQuestion = true;
@@ -11,6 +14,12 @@ function renderCarouselView(deck) {
   const carouselTitle = carouselEl.querySelector(".carousel__title");
   const carouselCard = carouselEl.querySelector(".carousel__card");
   const carouselCardText = carouselEl.querySelector(".carousel__card-text");
+
+  if (carouselEventsController) {
+    carouselEventsController.abort();
+  }
+  carouselEventsController = new AbortController();
+  const eventOptions = { signal: carouselEventsController.signal };
 
   function disableButton(buttonEl, disabledClass) {
     buttonEl.classList.add(disabledClass);
@@ -51,7 +60,7 @@ function renderCarouselView(deck) {
   flipBtn.addEventListener("click", () => {
     showingQuestion = !showingQuestion;
     updateDisplay();
-  });
+  }, eventOptions);
 
   rightBtn.addEventListener("click", () => {
     if (currentIndex < deck.cards.length - 1) {
@@ -59,7 +68,7 @@ function renderCarouselView(deck) {
       showingQuestion = true;
       updateDisplay();
     }
-  });
+  }, eventOptions);
 
   leftBtn.addEventListener("click", () => {
     if (currentIndex > 0) {
@@ -67,7 +76,7 @@ function renderCarouselView(deck) {
       showingQuestion = true;
       updateDisplay();
     }
-  });
+  }, eventOptions);
 
   removeColorClasses(carouselCard);
   const colorName = hexToString(deck.color);
