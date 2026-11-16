@@ -40,7 +40,7 @@
 .card {
   position: relative;
   width: 325px;
-  height: 205px;
+  height: auto;
   display: flex;
   border-radius: 20px;
   border-width: 10px;
