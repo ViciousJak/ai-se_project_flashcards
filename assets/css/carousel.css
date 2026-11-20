@@ -58,20 +58,9 @@
   max-width: 80%;
 }
 
-/* lets the user still hover over the disabled button*/
-/*.carousel__btn_right:not(:disabled):hover {
-  opacity: 100%;
-  cursor: pointer;
-}*/
-
 .carousel__btn_left {
   max-width: 80%;
 }
-
-/*.carousel__btn_left:not(:disabled):hover {
-  opacity: 100%;
-  cursor: pointer;
-}*/
 
 .carousel__btn_left_disabled {
   opacity: 20%;

@@ -1,4 +1,5 @@
 /**/
+#deck-view .deck-view__row,
 #home .deck-view__row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(325px, 100%), 353px));
@@ -6,10 +7,21 @@
   gap: 18px;
 }
 
+#deck-view .card,
 #home .card,
 #home .newdeck {
   width: 100%;
-  aspect-ratio: 325 / 205;
+  aspect-ratio: 353 / 205;
+  height: auto;
+}
+
+#deck-view .deck-view__header {
+  grid-column: 1 / -1;
+}
+
+#deck-view .gallery__new-card-btn {
+  width: 100%;
+  aspect-ratio: 353/205;
   height: auto;
 }
 
@@ -67,15 +79,12 @@
     justify-content: center;
   }
 
-  #deck-title .gallery__practice {
-  }
-
-  #home .newdeck,
-  #deck-view .gallery__new-card-btn {
+  #home .newdeck {
     position: fixed;
     padding: 12px 20px 12px 20px;
     bottom: 68px;
     font-size: 18px;
+    justify-content: center;
     line-height: 100%;
     border-radius: 8px;
     background-color: #1a1a1a;
@@ -100,8 +109,35 @@
     right: 0;
     height: 156px;
     background: linear-gradient(to bottom, transparent 0%, #ececec 35%);
-    pointer-events: none;
+    pointer-events: visible;
     z-index: 1;
+  }
+
+  #deck-view .gallery__practice-btn,
+  #deck-view .gallery__new-card-btn {
+    position: fixed;
+    bottom: 68px;
+    width: min(170px, calc(50vw - 26px));
+    height: auto;
+    aspect-ratio: auto;
+    padding: 12px 8px;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 1;
+    box-sizing: border-box;
+    z-index: 2;
+    gap: 12px;
+  }
+
+  #deck-view .gallery__new-card-btn_location_deck-view {
+    left: max(20px, calc(50vw - 176.5px));
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  #deck-view .gallery__practice {
+    left: calc(max(20px, 50vw - 170px) + min(170px, 50vw - 26px) + 12px);
   }
 
   .footer {

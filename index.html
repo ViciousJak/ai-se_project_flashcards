@@ -68,7 +68,6 @@
           </ul>
         </div>
       </section>
-      <!--- start of practice button code --->
       <section
         id="deck-view"
         class="gallery"
@@ -78,15 +77,22 @@
         <div class="wrapping__row deck-view__row">
           <div class="gallery__header deck-view__header">
             <h2 id="deck-title" class="gallery__title"></h2>
-            <button type="button" class="gallery__practice">Practice</button>
+            <button
+              type="button"
+              class="gallery__practice gallery__practice-btn"
+            >
+              Practice
+            </button>
           </div>
           <ul class="gallery__list wrapping__row__display-contents"></ul>
-          <button type="button" class="gallery__new-card-btn">+New Card</button>
+          <button
+            type="button"
+            class="gallery__new-card-btn gallery__new-card-btn_location_deck-view"
+          >
+            +New Card
+          </button>
         </div>
       </section>
-      <!--- end of pratice button code --->
-
-      <!-- start of deck template -->
       <template id="card-template">
         <li class="card">
           <h3 class="card__title"></h3>
@@ -149,7 +155,7 @@
       </section>
       <section id="not-found" class="not-found" hidden>
         <h2 class="not-found__title">404 Not Found</h2>
-        <p class="not-found__text">Opps! We can't find that.</p>
+        <p class="not-found__text">Oops! We can't find that.</p>
       </section>
     </main>
     <footer class="footer">@2006 Julian Diaz</footer>
