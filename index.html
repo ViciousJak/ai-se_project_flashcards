@@ -23,7 +23,7 @@
     <script type="module" src="./assets/js/index.js"></script>
     <title>Document</title>
   </head>
-  <body class="page">
+  <body class="page page_location_carousel">
     <header class="header">
       <h1 class="header__title">
         <a class="header__link" href="#home">Flash Cards</a>
@@ -117,7 +117,7 @@
       <!-- end of deck template -->
       <section id="carousel" class="carousel" hidden>
         <h2 class="carousel__title"></h2>
-        <div class="carousel__row">
+        <div class="carousel__grid">
           <button
             disabled
             type="button"
@@ -144,14 +144,18 @@
               class="carousel__btn_right"
             />
           </button>
+          <button
+            type="button"
+            aria-label="Flip card"
+            class="carousel__btn carousel__btn_flip"
+          >
+            <img
+              src="assets/images/flip.svg"
+              alt=""
+              class="carousel__btn_flip"
+            />
+          </button>
         </div>
-        <button
-          type="button"
-          aria-label="Flip card"
-          class="carousel__btn carousel__btn_flip"
-        >
-          <img src="assets/images/flip.svg" alt="" class="carousel__btn_flip" />
-        </button>
       </section>
       <section id="not-found" class="not-found" hidden>
         <h2 class="not-found__title">404 Not Found</h2>

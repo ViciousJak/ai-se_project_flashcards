@@ -12,6 +12,8 @@ const deckTemplate = document.querySelector("#deck-template");
 const deckList = galleryView.querySelector(".deck-view__list");
 const practiceButton = deckView.querySelector(".gallery__practice");
 
+const page = document.querySelector(".page");
+
 let currentDeck = null;
 
 practiceButton.addEventListener("click", () => {
@@ -100,6 +102,10 @@ function showView(viewToShow) {
   [galleryView, deckView, carouselView, notFoundView].forEach((view) => {
     view.hidden = view !== viewToShow;
   });
+  page.classList.toggle(
+    "page_no-mobile-bar",
+    viewToShow === carouselView || viewToShow === notFoundView,
+  );
 }
 
 decks.forEach(renderDeckEl);

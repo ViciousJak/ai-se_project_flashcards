@@ -25,6 +25,10 @@
   height: auto;
 }
 
+.carousel__card {
+  box-sizing: border-box;
+}
+
 /*applies style according to screens as narrow or narrower than 889px*/
 @media screen and (max-width: 889px) {
   .page {
@@ -38,9 +42,12 @@
   }
 
   .header {
-    padding: 20px 0;
     justify-content: space-between;
     align-items: center;
+    width: calc(100% + 40px);
+    margin-inline: -20px;
+    padding-inline: 20px;
+    box-sizing: border-box;
   }
 
   .header__link {
@@ -61,6 +68,8 @@
     padding: 4px 6px 4px 6px;
     gap: 10px;
     margin: 0;
+    width: auto;
+    justify-content: flex-end;
   }
 
   .wrapping__row {
@@ -113,6 +122,10 @@
     z-index: 1;
   }
 
+  .page_no-mobile-bar::after {
+    display: none;
+  }
+
   #deck-view .gallery__practice-btn,
   #deck-view .gallery__new-card-btn {
     position: fixed;
@@ -138,6 +151,49 @@
 
   #deck-view .gallery__practice {
     left: calc(max(20px, 50vw - 170px) + min(170px, 50vw - 26px) + 12px);
+  }
+
+  .carousel__grid {
+    display: grid;
+    width: min(100%, 353px);
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    grid-template-areas:
+      "card card card"
+      "left flip right";
+    align-items: center;
+  }
+
+  .carousel__grid > .carousel__btn_left {
+    grid-area: left;
+  }
+  .carousel__grid > .carousel__card {
+    grid-area: card;
+  }
+  .carousel__grid > .carousel__btn_right {
+    grid-area: right;
+    justify-self: end;
+  }
+  .carousel__grid > .carousel__btn_flip {
+    grid-area: flip;
+    justify-self: center;
+  }
+
+  .carousel__btn {
+    margin-top: 20px;
+  }
+
+  .carousel__card {
+    grid-area: card;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 353 / 420;
+    max-height: calc(100dvh - 300px);
+    margin: 0;
+  }
+
+  .page_location_carousel .footer {
+    position: static;
   }
 
   .footer {

@@ -12,7 +12,7 @@
 }
 
 .carousel__card {
-  margin: 32px 20px 24px 20px;
+  margin: 32px 0px 24px;
   border-radius: 20px;
   width: 440px;
   height: 300px;
@@ -43,23 +43,16 @@
   background-color: #fff;
   cursor: pointer;
   border: none;
+  align-items: center;
 }
 
-.carousel__btn_flip {
-  max-width: 80%;
+.carousel__btn > img {
+  width: 24px;
 }
 
 .carousel__btn_flip:not(:disabled):hover {
   opacity: 100%;
   cursor: pointer;
-}
-
-.carousel__btn_right {
-  max-width: 80%;
-}
-
-.carousel__btn_left {
-  max-width: 80%;
 }
 
 .carousel__btn_left_disabled {
@@ -78,10 +71,28 @@
   cursor: default;
 }
 
-.carousel__row {
-  display: flex;
-  flex-direction: row;
+.carousel__grid {
+  display: grid;
+  grid-template-columns: 44px 440px 44px;
+  grid-template-areas:
+    "left card right"
+    ". flip .";
   align-items: center;
+  column-gap: 20px;
+}
+
+.carousel__grid > .carousel__btn_left {
+  grid-area: left;
+}
+.carousel__grid > .carousel__card {
+  grid-area: card;
+}
+.carousel__grid > .carousel__btn_right {
+  grid-area: right;
+}
+.carousel__grid > .carousel__btn_flip {
+  grid-area: flip;
+  justify-self: center;
 }
 
 .carousel__card_color {
